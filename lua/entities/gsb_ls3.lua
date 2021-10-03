@@ -18,16 +18,16 @@ ENT.Buoyancy = 0.1
 ENT.Rotors = {
     [0] = {
         ContinuousHP = 700, MaxHP = 850,
-        Position = Vector(-302, -39, 20), Rotation = Angle(5, 180, 0),
+        Position = Vector(-39, -302, 20), Rotation = Angle(180, 0, 5),
         Order = 1, MaxTurn = 30
     },
     [1] = {
         ContinuousHP = 700, MaxHP = 850,
-        Position = Vector(-302, 39, 20), Rotation = Angle(5, 180, 0),
+        Position = Vector(39, -302, 20), Rotation = Angle(180, 0, 5),
         Order = -1, MaxTurn = 30
     }
 }
 
 ENT.Seats = {
-    [0] = {Pos = Vector(185, -10, 100), Ang = Angle(0, 0, 0), Weapons = {}}
+    [0] = {Pos = Vector(20, 170, 95), Ang = Angle(0, 0, 0), Weapons = {}}
 }

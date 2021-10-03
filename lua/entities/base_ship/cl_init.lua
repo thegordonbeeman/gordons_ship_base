@@ -20,3 +20,7 @@ end
 function ENT:GSBCalcViewFirstPerson(view, ply)
     return view
 end
+
+function ENT:GSBCalcViewThirdPerson(view, ply)
+    return view
+end

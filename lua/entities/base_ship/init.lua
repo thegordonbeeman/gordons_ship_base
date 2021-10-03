@@ -179,7 +179,29 @@ function ENT:Use(ply)
 
         if (IsValid(DriverSeat) and not IsValid(DriverSeat:GetDriver()) and not ply:KeyDown(IN_WALK)) then
             ply:EnterVehicle(DriverSeat)
-        end
+        else
+			local Seat = NULL
+			local Dist = 500000
+			
+			-- for _, v in pairs( self:GetPassengerSeats() ) do
+			-- 	if IsValid( v ) and not IsValid( v:GetDriver() ) then
+			-- 		local cDist = (v:GetPos() - ply:GetPos()):Length()
+					
+			-- 		if cDist < Dist then
+			-- 			Seat = v
+			-- 			Dist = cDist
+			-- 		end
+			-- 	end
+			-- end
+			
+			if IsValid( Seat ) then
+				ply:EnterVehicle( Seat )
+			else
+				if not IsValid( self:GetDriver() ) and not AI then
+					ply:EnterVehicle( DriverSeat )
+				end
+			end
+		end
     end
 end
 

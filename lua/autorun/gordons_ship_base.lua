@@ -41,6 +41,7 @@ if CLIENT then
 		view.origin = pos
 		view.fov = fov
 		view.drawviewer = true
+		view.angles = (Ship:GetForward() * 0.8 + ply:EyeAngles():Forward()):Angle()
 
         if Ship:GetDriverSeat() ~= Pod then
 			view.angles = ply:EyeAngles()
@@ -50,7 +51,7 @@ if CLIENT then
 			
 			view.drawviewer = false
 			
-			return Ship:GSBCalcViewFirstPerson( view, ply )
+			return Ship:GSBCalcViewThirdPerson( view, ply )
 		end
 		
 		local radius = 550
@@ -78,6 +79,6 @@ if CLIENT then
 			view.origin = view.origin + tr.HitNormal * WallOffset
 		end
 
-		return Ship:LFSCalcViewThirdPerson( view, ply )
+		return Ship:GSBCalcViewFirstPerson( view, ply )
     end)
 end
