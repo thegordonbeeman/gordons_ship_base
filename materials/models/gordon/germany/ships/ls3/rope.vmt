@@ -1,0 +1,5 @@
+VertexLitGeneric
+{
+	$basetexture "models\gordon\germany\ships\ls3\textures/rope_c"
+	$translucent 1
+}

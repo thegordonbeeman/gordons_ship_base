@@ -1,0 +1,10 @@
+VertexLitGeneric
+{
+	$basetexture "models\gordon\germany\ships\ls3\textures/mg_151_c_camo_hellgrau_50"
+	
+	$phong 		1
+	$bumpmap 	"models\gordon\germany\ships\ls3\textures/mg_151_n"
+	$phongexponent			5
+	$phongboost				1.0
+	$phongfresnelranges		"[0 0.5 1]"
+}
